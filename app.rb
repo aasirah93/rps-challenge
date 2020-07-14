@@ -1,3 +1,7 @@
+require 'sinatra/base'
+
+class Rps < Sinatra::Base
+
 get '/' do
   erb :index
 end
@@ -5,4 +9,5 @@ end
 post '/names' do
   @player_1_name = params[:player_1_name]
   erb :play
+end
 end
